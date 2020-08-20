@@ -7,7 +7,7 @@ let songOne, songTwo, songThree, songFour, songFive, songsix, songSeven, songEig
 let soundNames = ['l','u','l','l','a', 'b','y','e']
 
 function preload(){
-	songOne = loadSound('https://res.cloudinary.com/de3c6e2g5/video/upload/v1597614375/illus_sel01_normA_p4rgdg.wav');
+  songOne = loadSound('https://res.cloudinary.com/de3c6e2g5/video/upload/v1597614375/illus_sel01_normA_p4rgdg.wav');
   songTwo = loadSound('https://res.cloudinary.com/de3c6e2g5/video/upload/v1597614375/illus_sel01_normB_fva9kl.wav');
   songThree = loadSound('https://res.cloudinary.com/de3c6e2g5/video/upload/v1597614375/illus_sel01_normC_r8krxq.wav');
   songFour = loadSound('https://res.cloudinary.com/de3c6e2g5/video/upload/v1597614375/illus_sel01_normD_jq1wr7.wav');
@@ -90,7 +90,7 @@ function drawRect() {
 	for(let k = 0; k < width; k = k + width/8){
     let colB = map(k, 0, width, 0, 255);
     let colR = map(k, 0, width, 240, 100);
-    let colG = map(k, 0, width, 100, 240);
+   // let colG = map(k, 0, width, 100, 240);
     noStroke();
   	fill(colR, colG, colB, 150);
     rect(k, 0, width/8, height);
