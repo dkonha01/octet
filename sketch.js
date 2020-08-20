@@ -52,7 +52,7 @@ songOne.disconnect(); // so we'll only hear delay
 }
 
 function modelReady() {
-  success = createP('Raise your right hand to begin playing');
+  success = createP('Allow camera access and raise your right hand to begin playing! FYI - You are NOT being recorded');
   success.class('success');
 }
 
