@@ -81,16 +81,16 @@ function emptyState(){
   background(245,245,245)
   fill(25);
   textAlign(CENTER);
-  textSize(20);
-  text('Robot slaves working hard' , width/2, height/2);
+  textSize(16);
+  text('' , width/2, height/2);
 }
 
 
 function drawRect() {
     for(let k = 0; k < width; k = k + width/8){
        let colB = map(k, 0, width, 0, 255);
-       let colR = map(k, 0, width, 100, 0);
-       let colG = map(k, 0, width, 100, 240);
+       let colR = map(k, 0, width, 0, 100);
+       let colG = map(k, 0, width, 0, 200);
        noStroke();
        fill(colR, colG, colB, 150);
        rect(k, 0, width/8, height);
