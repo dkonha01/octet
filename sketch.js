@@ -89,8 +89,8 @@ function emptyState(){
 function drawRect() {
     for(let k = 0; k < width; k = k + width/8){
        let colB = map(k, 0, width, 0, 255);
-       let colR = map(k, 0, width, 100, 240);
-       let colG = map(k, 0, width, 100, 0);
+       let colR = map(k, 0, width, 100, 0);
+       let colG = map(k, 0, width, 100, 240);
        noStroke();
        fill(colR, colG, colB, 150);
        rect(k, 0, width/8, height);
