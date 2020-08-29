@@ -19,10 +19,10 @@ function preload(){
 }
 
 function setup() {
-  canvas = createCanvas(1080, 720);
-  //canvas = createCanvas(1200, 800);
+  
+  canvas = createCanvas(900, 600);
   //canvas = createCanvas(800, 560);
-  canvas.position((windowWidth - width)/2, 150);
+  canvas.position((windowWidth - width)/2, 100);
  // canvas.position((windowWidth - width)/2, 100);
 
   //Capture the video and hide it.
