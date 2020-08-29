@@ -19,9 +19,11 @@ function preload(){
 }
 
 function setup() {
-  canvas = createCanvas(1200, 800);
+  canvas = createCanvas(1080, 720);
+  //canvas = createCanvas(1200, 800);
   //canvas = createCanvas(800, 560);
-  canvas.position((windowWidth - width)/2, 100);
+  canvas.position((windowWidth - width)/2, 150);
+ // canvas.position((windowWidth - width)/2, 100);
 
   //Capture the video and hide it.
   video = createCapture(VIDEO);
@@ -52,7 +54,7 @@ songOne.disconnect(); // so we'll only hear delay
 }
 
 function modelReady() {
-  success = createP('Allow camera access and raise your right hand to begin playing!');
+  success = createP('Allow camera access, raise your right hand to the level of your webcam, and then sway your hand back and forth to begin playing!');
   success.class('success');
 }
 
