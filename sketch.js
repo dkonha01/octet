@@ -5,6 +5,7 @@ let poses = [];
 let sucess;
 let songOne, songTwo, songThree, songFour, songFive, songsix, songSeven, songEight;
 let soundNames = ['l','u','l','l','a', 'b','y','e']
+let img;
 
 function preload(){
   songOne = loadSound('https://res.cloudinary.com/de3c6e2g5/video/upload/v1597614375/illus_sel01_normA_p4rgdg.wav');
@@ -29,6 +30,8 @@ function setup() {
   video = createCapture(VIDEO);
   video.size(width, height);
   video.hide();
+
+  img = loadImage('redGrunge.png');
 
   // Create a new poseNet method with a single detection
   poseNet = ml5.poseNet(video, modelReady);
@@ -60,6 +63,8 @@ function modelReady() {
 
 function draw() {
 
+
+      
       //Push the hidden video onto the canvas
 			push();
 			translate(video.width , 0);
@@ -67,7 +72,7 @@ function draw() {
       image(video, 0, 0, width, height);
 			pop();
 
-
+      image(img, 0, 0);
       // Function to draw multiple rectangles onto the screen
       drawRect();
 
@@ -128,7 +133,7 @@ function wristPlayer()  {
       // Only draw an ellipse is the pose probability is bigger than 0.2
       if (rightWrist.score > 0.2) {
         //Draw an ellipse at the nose
-        fill(255, 0, 0, 150);
+        fill(127, 0, 127, 77);
         noStroke();
         ellipse(width - rightWrist.position.x, rightWrist.position.y, 30, 30);
 		
