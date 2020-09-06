@@ -97,9 +97,10 @@ function drawRect() {
     for(let k = 0; k < width; k = k + width/8){
        let colB = map(k, 0, width, 0, 255);
        let colR = map(k, 0, width, 0, 100);
-       let colG = map(k, 0, width, 0, 200);
+       let colG = map(k, 0, width, 0, 255);
+       //let colG = map(k, 0, width, 0, 200);
        noStroke();
-       fill(colR, colG, colB, 215);
+       fill(colR, colG, colB, 255);
        //   fill(colR, colG, colB, 150);
        rect(k, 0, width/8, height);
   }
