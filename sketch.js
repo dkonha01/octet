@@ -62,8 +62,6 @@ function modelReady() {
 }
 
 function draw() {
-
-
       
       //Push the hidden video onto the canvas
 			push();
@@ -92,13 +90,12 @@ function emptyState(){
   text('' , width/2, height/2);
 }
 
-
 function drawRect() {
     for(let k = 0; k < width; k = k + width/8){
        let colB = map(k, 0, width, 0, 255);
        let colR = map(k, 0, width, 0, 100);
        let colG = map(k, 0, width, 0, 255);
-       //let colG = map(k, 0, width, 0, 200);
+       
        noStroke();
        fill(colR, colG, colB, 200);
        //   fill(colR, colG, colB, 150);
@@ -119,8 +116,6 @@ function writeText(){
   text(soundNames[6] , 13*width/16, height/2);
   text(soundNames[7] , 15*width/16, height/2);
 }
-
-
 
 function wristPlayer()  {
 
