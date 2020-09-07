@@ -76,6 +76,8 @@ function draw() {
 
 }
 
+/*
+
 function emptyState(){
   background(245,245,245)
   fill(25);
@@ -83,6 +85,7 @@ function emptyState(){
   textSize(16);
   text('' , width/2, height/2);
 }
+*/
 
 function drawRect() {
     for(let k = 0; k < width; k = k + width/8){
