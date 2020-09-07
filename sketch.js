@@ -22,7 +22,7 @@ function preload(){
 function setup() {
   
   //canvas = createCanvas(900, 600);
-  canvas = createCanvas(1080, 720);
+  canvas = createCanvas(960, 720);
   canvas.position((windowWidth - width)/2, 50);
 
 
