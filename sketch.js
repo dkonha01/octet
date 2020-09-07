@@ -21,10 +21,10 @@ function preload(){
 
 function setup() {
   
-  canvas = createCanvas(900, 600);
-  //canvas = createCanvas(800, 560);
-  canvas.position((windowWidth - width)/2, 100);
- // canvas.position((windowWidth - width)/2, 100);
+  //canvas = createCanvas(900, 600);
+  canvas = createCanvas(1080, 720);
+  canvas.position((windowWidth - width)/2, 50);
+
 
   //Capture the video and hide it.
   video = createCapture(VIDEO);
@@ -33,16 +33,12 @@ function setup() {
 
   img = loadImage('redGrunge.png');
 
-  // Create a new poseNet method with a single detection
   poseNet = ml5.poseNet(video, modelReady);
-  // This sets up an event that fills the global variable "poses"
-  // with an array every time new poses are detected
   poseNet.on('pose', function (results) {
     poses = results;
  });
- // Hide the video element, and just show the canvas
+
 /*
-songOne.disconnect(); // so we'll only hear delay
 
  delay = new p5.Delay();
  delay.process(songOne, 0.23, 0.7, 3700);
@@ -73,10 +69,8 @@ function draw() {
       image(img, 0, 0);
       // Function to draw multiple rectangles onto the screen
       drawRect();
-
-      // Function to draw the nose ellipse and logics for music playing
+      // Function to draw the ellipse and trigger samples
       wristPlayer();
-
       //Function to draw text onto the rectangles
       writeText();
 
